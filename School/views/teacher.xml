@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <record model ="ir.ui.view" id = "view_teacher_tree">
+            <field name ="name">Teacher Tree View</field>
+            <field name ="model">school.teacher</field>
+            <field name ="arch" type="xml">
+                <tree string="Teacher list">
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="birth_date"/>
+                    <field name="gender"/>
+                </tree>
+            </field>
+        </record>
+
+         <record model ="ir.ui.view" id = "view_teacher_form">
+            <field name ="name">Teacher Form View</field>
+            <field name ="model">school.teacher</field>
+            <field name ="arch" type="xml">
+                <form string="Teacher list">
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="birth_date"/>
+                        <field name="gender"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+
+        <record  model="ir.actions.act_window" id="open_view_teacher_tree">
+            <field name ="name">Student</field>
+            <field name ="res_model">school.teacher</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Record found!
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
